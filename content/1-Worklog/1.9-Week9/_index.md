@@ -5,53 +5,54 @@ weight: 1
 chapter: false
 pre: " <b> 1.9. </b> "
 ---
-{{% notice warning %}} 
-⚠️ **Note:** The following information is for reference purposes only. Please **do not copy verbatim** for your own report, including this warning.
-{{% /notice %}}
-
 
 ### Week 9 Objectives:
 
-* Connect and get acquainted with members of First Cloud Journey.
-* Understand basic AWS services, how to use the console & CLI.
+* Master the **core concepts and architectural principles of AWS IoT Core** for IoT device management and communication.
+* Develop comprehensive understanding of **AWS Amplify** platform for full-stack frontend development and cloud hosting.
+* Understand the integration mechanisms between these services within the broader AWS ecosystem.
+* Apply acquired knowledge to enhance and accelerate the group project implementation.
 
 ### Tasks to be carried out this week:
 | Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
 | --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Get acquainted with FCJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 08/11/2025 | 08/11/2025      |
-| 3   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                              | 08/12/2025 | 08/12/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 08/13/2025 | 08/13/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - SSH connection methods to EC2 <br> - Learn about Elastic IP   <br>                            | 08/14/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 08/15/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| Mon   | - Comprehensive overview of **AWS IoT Core**: fundamental concepts, system architecture, and device communication protocols                                                                                 | 11/03/2025 | 11/03/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| Tue   | - Deep dive into **MQTT protocol**, IoT Thing management, Device Shadow mechanism, and Rules Engine functionality                                                                                        | 11/04/2025 | 11/04/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| Wed   | - Explore **AWS Amplify**: capabilities, features, and frontend hosting infrastructure                                                                                                                   | 11/05/2025 | 11/05/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| Thu   | - Examine Amplify integration patterns with Authentication, API Gateway, and Data Storage services                                                                                                      | 11/06/2025 | 11/06/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| Fri   | - Analyze real-world production use cases and implementation patterns for AWS IoT Core and Amplify solutions                                                                                            | 11/07/2025 | 11/07/2025      | <https://cloudjourney.awsstudygroup.com/> |
 
 
 ### Week 9 Achievements:
 
-* Understood what AWS is and mastered the basic service groups: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+#### 1. Mastery of AWS IoT Core Architecture
 
-* Successfully created and configured an AWS Free Tier account.
+* Successfully comprehended the architectural design and operational principles of **AWS IoT Core** for enterprise-scale IoT device management.
 
-* Became familiar with the AWS Management Console and learned how to find, access, and use services via the web interface.
+* Acquired thorough understanding of IoT Thing management, device registration, and lifecycle operations.
 
-* Installed and configured AWS CLI on the computer, including:
-  * Access Key
-  * Secret Key
-  * Default Region
-  * ...
+#### 2. Deep Understanding of IoT Communication Protocols
 
-* Used AWS CLI to perform basic operations such as:
+* Demonstrated proficiency in **MQTT protocol** fundamentals, including publish-subscribe messaging patterns and quality-of-service (QoS) levels.
 
-  * Check account & configuration information
-  * Retrieve the list of regions
-  * View EC2 service
-  * Create and manage key pairs
-  * Check information about running services
-  * ...
+* Mastered the **Device Shadow** mechanism for managing device state and enabling offline-capable operations.
 
-* Acquired the ability to connect between the web interface and CLI to manage AWS resources in parallel.
-* ...
+* Gained comprehensive knowledge of the **Rules Engine** for processing and routing IoT messages to downstream AWS services.
+
+#### 3. Comprehensive Knowledge of AWS Amplify
+
+* Acquired in-depth understanding of **AWS Amplify** as a comprehensive full-stack platform for modern web application development and deployment.
+
+* Understood Amplify's capabilities for frontend hosting, continuous deployment, and development environment management.
+
+#### 4. Integration Architecture Understanding
+
+* Demonstrated proficiency in integrating Amplify with **Authentication services**, enabling secure user access management.
+
+* Understood Amplify integration with **API Gateway** and Lambda for backend service connectivity.
+
+* Mastered integration patterns with **Data Storage services** for persistent data management in full-stack applications.
+
+#### 5. Practical Application to Group Project
+
+* Expanded comprehensive knowledge of the AWS ecosystem to inform and accelerate group project design and implementation strategies.

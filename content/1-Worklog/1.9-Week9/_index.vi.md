@@ -5,55 +5,56 @@ weight: 1
 chapter: false
 pre: " <b> 1.9. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
-
 
 ### Mục tiêu tuần 9:
 
-* Kết nối, làm quen với các thành viên trong First Cloud Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+* Thành thạo các **khái niệm cốt lõi và nguyên tắc kiến trúc của AWS IoT Core** để quản lý và giao tiếp thiết bị IoT.
+* Phát triển sự hiểu biết toàn diện về **nền tảng AWS Amplify** cho phát triển full-stack frontend và lưu trữ trên đám mây.
+* Hiểu rõ các cơ chế tích hợp giữa các dịch vụ này trong hệ sinh thái AWS rộng lớn hơn.
+* Áp dụng kiến thức đã học để cải thiện và tăng tốc độ triển khai dự án nhóm.
 
 ### Các công việc cần triển khai trong tuần này:
 | Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
 | --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| Thứ Hai   | - Tổng quan toàn diện về **AWS IoT Core**: các khái niệm cơ bản, kiến trúc hệ thống và giao thức giao tiếp thiết bị                                                                                 | 11/03/2025   | 11/03/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| Thứ Ba   | - Tìm hiểu sâu về **giao thức MQTT**, quản lý IoT Thing, cơ chế Device Shadow và chức năng Rules Engine                                                                                        | 11/04/2025   | 11/04/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| Thứ Tư   | - Khám phá **AWS Amplify**: khả năng, tính năng và cơ sở hạ tầng lưu trữ frontend                                                                                                                   | 11/05/2025   | 11/05/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| Thứ Năm   | - Kiểm tra các mô hình tích hợp Amplify với các dịch vụ Xác thực, API Gateway và Lưu trữ Dữ liệu                                                                                                      | 11/06/2025   | 11/06/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| Thứ Sáu   | - Phân tích các trường hợp sử dụng thực tế trong sản xuất và các mô hình triển khai cho giải pháp AWS IoT Core và Amplify                                                                                            | 11/07/2025   | 11/07/2025      | <https://cloudjourney.awsstudygroup.com/> |
 
 
 ### Kết quả đạt được tuần 9:
 
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+#### 1. Thành Thạo Kiến Trúc AWS IoT Core
 
-* Đã tạo và cấu hình AWS Free Tier account thành công.
+* Hiểu rõ thiết kế kiến trúc và các nguyên tắc hoạt động của **AWS IoT Core** cho quản lý thiết bị IoT ở quy mô doanh nghiệp.
 
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
+* Nắm vững sự hiểu biết toàn diện về quản lý IoT Thing, đăng ký thiết bị và các hoạt động vòng đời.
 
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
+#### 2. Hiểu Biết Sâu Sắc về Giao Thức Giao Tiếp IoT
 
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
+* Thể hiện thành thạo các nguyên tắc cơ bản của **giao thức MQTT**, bao gồm các mô hình nhắn tin Pub-Sub và mức độ Chất lượng Dịch vụ (QoS).
 
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
+* Thành thạo cơ chế **Device Shadow** để quản lý trạng thái thiết bị và cho phép các hoạt động có khả năng hoạt động ngoại tuyến.
 
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
+* Nắm vững kiến thức toàn diện về **Rules Engine** để xử lý và định tuyến các tin nhắn IoT tới các dịch vụ AWS phía cuối.
+
+#### 3. Kiến Thức Toàn Diện về AWS Amplify
+
+* Hiểu sâu về **AWS Amplify** như một nền tảng full-stack toàn diện để phát triển và triển khai ứng dụng web hiện đại.
+
+* Hiểu được khả năng của Amplify cho lưu trữ frontend, triển khai liên tục và quản lý môi trường phát triển.
+
+#### 4. Hiểu Biết Kiến Trúc Tích Hợp
+
+* Thể hiện thành thạo trong việc tích hợp Amplify với **dịch vụ Xác thực**, cho phép quản lý truy cập người dùng an toàn.
+
+* Hiểu được tích hợp Amplify với **API Gateway** và Lambda để kết nối dịch vụ backend.
+
+* Thành thạo các mô hình tích hợp với **dịch vụ Lưu trữ Dữ liệu** để quản lý dữ liệu bền vững trong các ứng dụng full-stack.
+
+#### 5. Ứng Dụng Thực Tiễn cho Dự Án Nhóm
+
+* Mở rộng kiến thức toàn diện về hệ sinh thái AWS để thông báo và tăng tốc độ chiến lược thiết kế và triển khai dự án nhóm.
 
 
