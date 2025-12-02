@@ -1,126 +1,59 @@
 ---
-title: "Blog 3"
-date: "2025-09-10"
+title: "BLog 3"
+date: "2025-09-09"
 weight: 1
 chapter: false
 pre: " <b> 3.3. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Note:** The information below is for reference purposes only. Please **do not copy verbatim** for your report, including this warning.
-{{% /notice %}}
 
-# Getting Started with Healthcare Data Lakes: Using Microservices
+# How Minnesota Athletics built a unified data layer to boost fan engagement with AWS
 
-Data lakes can help hospitals and healthcare facilities turn data into business insights, maintain business continuity, and protect patient privacy. A **data lake** is a centralized, managed, and secure repository to store all your data, both in its raw and processed forms for analysis. Data lakes allow you to break down data silos and combine different types of analytics to gain insights and make better business decisions.
+Each ticket sold for a University of Minnesota athletic event changes hands an average of three times. With over a million people passing through the gates annually, the volume of transactional data is massive.
 
-This blog post is part of a larger series on getting started with setting up a healthcare data lake. In my final post of the series, *“Getting Started with Healthcare Data Lakes: Diving into Amazon Cognito”*, I focused on the specifics of using Amazon Cognito and Attribute Based Access Control (ABAC) to authenticate and authorize users in the healthcare data lake solution. In this blog, I detail how the solution evolved at a foundational level, including the design decisions I made and the additional features used. You can access the code samples for the solution in this Git repo for reference.
+Minnesota Athletics faced challenges with fragmented data and time-consuming manual processes. In less than a year, they replaced that complexity with a scalable **data lake** built on AWS.
 
 ---
 
-## Architecture Guidance
+## The University's "Front Porch"
 
-The main change since the last presentation of the overall architecture is the decomposition of a single service into a set of smaller services to improve maintainability and flexibility. Integrating a large volume of diverse healthcare data often requires specialized connectors for each format; by keeping them encapsulated separately as microservices, we can add, remove, and modify each connector without affecting the others. The microservices are loosely coupled via publish/subscribe messaging centered in what I call the “pub/sub hub.”
-
-This solution represents what I would consider another reasonable sprint iteration from my last post. The scope is still limited to the ingestion and basic parsing of **HL7v2 messages** formatted in **Encoding Rules 7 (ER7)** through a REST interface.
-
-**The solution architecture is now as follows:**
-
-> *Figure 1. Overall architecture; colored boxes represent distinct services.*
+Minnesota Athletics supports over 600 student-athletes and serves as the "front porch" connecting the public to the university. However, the legacy ecosystem consisted of loosely connected third-party tools, where data was shared only one-way, insufficient for deep insights into fan behavior.
 
 ---
 
-While the term *microservices* has some inherent ambiguity, certain traits are common:  
-- Small, autonomous, loosely coupled  
-- Reusable, communicating through well-defined interfaces  
-- Specialized to do one thing well  
-- Often implemented in an **event-driven architecture**
+## Solution: A Unified Data Lake on AWS
 
-When determining where to draw boundaries between microservices, consider:  
-- **Intrinsic**: technology used, performance, reliability, scalability  
-- **Extrinsic**: dependent functionality, rate of change, reusability  
-- **Human**: team ownership, managing *cognitive load*
+Aiming to own their data for real-time analytics, the team built a centralized data layer without overhauling the entire existing system.
+
+#### Why AWS?
+* **Cost-Effective:** Pay-as-you-go pricing allowed them to start small and scale.
+* **Control:** The team maintained full control over their data.
+* **Rapid Deployment:** Leveraged the university's existing agreement with AWS for quick provisioning.
 
 ---
 
-## Technology Choices and Communication Scope
+## System Architecture: Secure and Flexible
 
-| Communication scope                       | Technologies / patterns to consider                                                        |
-| ----------------------------------------- | ------------------------------------------------------------------------------------------ |
-| Within a single microservice              | Amazon Simple Queue Service (Amazon SQS), AWS Step Functions                               |
-| Between microservices in a single service | AWS CloudFormation cross-stack references, Amazon Simple Notification Service (Amazon SNS) |
-| Between services                          | Amazon EventBridge, AWS Cloud Map, Amazon API Gateway                                      |
+A small internal team of three completed this foundation in less than eight months. The architecture uses serverless services to ensure automation and security:
 
----
-
-## The Pub/Sub Hub
-
-Using a **hub-and-spoke** architecture (or message broker) works well with a small number of tightly related microservices.  
-- Each microservice depends only on the *hub*  
-- Inter-microservice connections are limited to the contents of the published message  
-- Reduces the number of synchronous calls since pub/sub is a one-way asynchronous *push*
-
-Drawback: **coordination and monitoring** are needed to avoid microservices processing the wrong message.
+1.  **Ingest:** Ticketing data is transferred securely via SFTP into a private **Amazon S3** environment.
+2.  **Security:** Access is tightly managed using **AWS Secrets Manager**.
+3.  **Processing:** **AWS Lambda** and **AWS Glue** automatically clean, deduplicate, and normalize data as files arrive.
+4.  **Redundancy:** Automated checks and S3 versioning help prevent data loss.
 
 ---
 
-## Core Microservice
+## Business Impact
 
-Provides foundational data and communication layer, including:  
-- **Amazon S3** bucket for data  
-- **Amazon DynamoDB** for data catalog  
-- **AWS Lambda** to write messages into the data lake and catalog  
-- **Amazon SNS** topic as the *hub*  
-- **Amazon S3** bucket for artifacts such as Lambda code
+Centralizing data delivered immediate results:
 
-> Only allow indirect write access to the data lake through a Lambda function → ensures consistency.
+* **Revenue Optimization:** A ticket price prediction model forecasted a **3–5% revenue increase** and helped minimize losses even during down years.
+* **Golden Record:** creating a unified customer profile by linking data from tickets, retail, and donations to understand individual fan value.
 
 ---
 
-## Front Door Microservice
+## Lessons Learned
 
-- Provides an API Gateway for external REST interaction  
-- Authentication & authorization based on **OIDC** via **Amazon Cognito**  
-- Self-managed *deduplication* mechanism using DynamoDB instead of SNS FIFO because:  
-  1. SNS deduplication TTL is only 5 minutes  
-  2. SNS FIFO requires SQS FIFO  
-  3. Ability to proactively notify the sender that the message is a duplicate  
-
----
-
-## Staging ER7 Microservice
-
-- Lambda “trigger” subscribed to the pub/sub hub, filtering messages by attribute  
-- Step Functions Express Workflow to convert ER7 → JSON  
-- Two Lambdas:  
-  1. Fix ER7 formatting (newline, carriage return)  
-  2. Parsing logic  
-- Result or error is pushed back into the pub/sub hub  
-
----
-
-## New Features in the Solution
-
-### 1. AWS CloudFormation Cross-Stack References
-Example *outputs* in the core microservice:
-```yaml
-Outputs:
-  Bucket:
-    Value: !Ref Bucket
-    Export:
-      Name: !Sub ${AWS::StackName}-Bucket
-  ArtifactBucket:
-    Value: !Ref ArtifactBucket
-    Export:
-      Name: !Sub ${AWS::StackName}-ArtifactBucket
-  Topic:
-    Value: !Ref Topic
-    Export:
-      Name: !Sub ${AWS::StackName}-Topic
-  Catalog:
-    Value: !Ref Catalog
-    Export:
-      Name: !Sub ${AWS::StackName}-Catalog
-  CatalogArn:
-    Value: !GetAtt Catalog.Arn
-    Export:
-      Name: !Sub ${AWS::StackName}-CatalogArn
+Travis Cameron shares advice for other institutions:
+* **Start Small:** Focus on a clear, narrow goal (e.g., ticketing data only) for phase one.
+* **Leverage Resources:** Use existing organizational AWS agreements.
+* **Small Teams Succeed:** A team of three can modernize data infrastructure with a clear vision.
