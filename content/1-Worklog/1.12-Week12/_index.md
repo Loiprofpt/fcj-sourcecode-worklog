@@ -5,53 +5,59 @@ weight: 2
 chapter: false
 pre: " <b> 1.12. </b> "
 ---
-{{% notice warning %}} 
-⚠️ **Note:** The following information is for reference purposes only. Please **do not copy verbatim** for your own report, including this warning.
-{{% /notice %}}
-
 
 ### Week 12 Objectives:
 
-* Connect and get acquainted with members of First Cloud Journey.
-* Understand basic AWS services, how to use the console & CLI.
+* Facilitate **comprehensive system integration testing and validation** across all project components.
+* Execute and deliver a **polished and successful project demonstration** to stakeholders.
+* Develop **professional presentation materials** documenting infrastructure, deployment automation, and system architecture.
+* Consolidate **all personal contributions and deliverables** into comprehensive documentation.
+* Finalize **worklog documentation and technical reports** summarizing the complete internship experience.
 
 ### Tasks to be carried out this week:
 | Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
 | --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Get acquainted with FCJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 08/11/2025 | 08/11/2025      |
-| 3   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                              | 08/12/2025 | 08/12/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 08/13/2025 | 08/13/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - SSH connection methods to EC2 <br> - Learn about Elastic IP   <br>                            | 08/14/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 08/15/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| Mon   | - Conduct collaborative backend system testing with team members and comprehensive validation of Terraform-deployed infrastructure                                                                                                  | 11/24/2025 | 11/24/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| Tue   | - Execute complete end-to-end system demonstration testing and verify all integrated components                                              | 11/25/2025 | 11/25/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| Wed   | - Develop comprehensive presentation materials covering infrastructure architecture, Terraform deployment methodology, and CI/CD automation strategies | 11/26/2025 | 11/26/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| Thu   | - Conduct comprehensive full-system demonstration testing and rehearsal                            | 11/27/2025 | 11/27/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| Fri   | - Compile Week 12 worklog documentation and finalize comprehensive summary of individual contributions and achievements                                                                                     | 11/28/2025 | 11/28/2025      | <https://cloudjourney.awsstudygroup.com/> |
 
 
 ### Week 12 Achievements:
 
-* Understood what AWS is and mastered the basic service groups: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+#### 1. Successful System Integration and Testing
 
-* Successfully created and configured an AWS Free Tier account.
+* Facilitated **comprehensive system integration testing**, validating all backend components and their interactions.
 
-* Became familiar with the AWS Management Console and learned how to find, access, and use services via the web interface.
+* Successfully verified the stability and reliability of the Terraform-deployed infrastructure under demonstration conditions.
 
-* Installed and configured AWS CLI on the computer, including:
-  * Access Key
-  * Secret Key
-  * Default Region
-  * ...
+* Ensured all infrastructure components functioned cohesively within the complete system architecture.
 
-* Used AWS CLI to perform basic operations such as:
+#### 2. Professional Project Demonstration
 
-  * Check account & configuration information
-  * Retrieve the list of regions
-  * View EC2 service
-  * Create and manage key pairs
-  * Check information about running services
-  * ...
+* **Successfully executed the group project demonstration**, showcasing all implemented functionality aligned with the original project specifications.
 
-* Acquired the ability to connect between the web interface and CLI to manage AWS resources in parallel.
-* ...
+* Demonstrated system capabilities to stakeholders with comprehensive end-to-end workflow coverage.
+
+* Validated system performance and reliability during demonstration scenarios.
+
+#### 3. Comprehensive Presentation Documentation
+
+* Developed **professional and technically rigorous presentation materials** encompassing:
+  * **Infrastructure Architecture Diagrams**: Detailed visual representation of deployed AWS services and component relationships
+  * **Terraform Deployment Methodology**: Documentation of infrastructure-as-code practices and deployment procedures
+  * **CI/CD Automation Strategy**: Comprehensive overview of GitHub Actions workflow implementation and benefits
+
+#### 4. Completion of Individual Contributions
+
+* Finalized all personal technical deliverables:
+  * **Terraform Configuration**: Production-ready infrastructure-as-code modules
+  * **CI/CD Pipeline**: Automated deployment workflows ensuring reliable infrastructure provisioning
+  * **Deployment Documentation**: Comprehensive technical documentation of deployment processes and configurations
+
+#### 5. Documentation Finalization
+
+* Completed **comprehensive Week 12 worklog** documenting the final week's activities and system completion milestones.
+
+* **Fully submitted all required internship reports** and documentation, providing complete technical record of the internship experience and achievements.
