@@ -12,46 +12,52 @@ pre: " <b> 1.7. </b> "
 
 ### Week 7 Objectives:
 
-* Connect and get acquainted with members of First Cloud Journey.
-* Understand basic AWS services, how to use the console & CLI.
+* Acquire comprehensive knowledge of **AWS Lambda** and its role in serverless computing architectures.
+* Develop proficiency in **AWS CLI** installation, configuration, and deployment of Java functions to Lambda.
+* Understand the integration patterns between **API Gateway** and **AWS Lambda** for building scalable backend APIs.
 
 ### Tasks to be carried out this week:
-| Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Get acquainted with FCJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 08/11/2025 | 08/11/2025      |
-| 3   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                              | 08/12/2025 | 08/12/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 08/13/2025 | 08/13/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - SSH connection methods to EC2 <br> - Learn about Elastic IP   <br>                            | 08/14/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 08/15/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| Day | Task                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
+| --- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------- | --------------- | ----------------------------------------- |
+| Mon   | - Gain an overview of AWS Lambda: core concepts, architectural principles, benefits of the serverless model, and function execution flow | 20/10/2025 | 20/10/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| Tue   | - Explore AWS CLI: functionality, installation procedures, IAM User configuration for AWS account access, and basic command syntax | 21/10/2025 | 21/10/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| Wed   | - Execute AWS CLI installation on a local machine, configure credentials, and conduct testing with resource management commands (S3, EC2, Lambda) | 22/10/2025 | 22/10/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| Thu   | - Study the Java function deployment workflow to AWS Lambda: Maven project preparation, .jar file packaging, and function creation/upload via AWS CLI | 23/10/2025 | 23/10/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| Fri   | - Practice deploying a Java function to Lambda through AWS CLI, configure appropriate IAM roles, and execute function operational tests | 24/10/2025 | 24/10/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| Sat   | - Examine API Gateway integration with AWS Lambda for backend API development; configure endpoints and perform API call validation | 25/10/2025 | 25/10/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| Sun   | - Synthesize knowledge on Lambda, API Gateway, and AWS CLI relationships; document deployment procedures and prepare the weekly report | 26/10/2025 | 26/10/2025      | <https://cloudjourney.awsstudygroup.com/> |
 
 
 ### Week 7 Achievements:
 
-* Understood what AWS is and mastered the basic service groups: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+#### 1. Comprehensive Understanding of AWS Lambda
 
-* Successfully created and configured an AWS Free Tier account.
+* Successfully grasped the fundamental concepts and role of **AWS Lambda** within serverless computing paradigms.
 
-* Became familiar with the AWS Management Console and learned how to find, access, and use services via the web interface.
+* Thoroughly understood Lambda's operational mechanism encompassing trigger activation, function execution lifecycle, and result delivery.
 
-* Installed and configured AWS CLI on the computer, including:
-  * Access Key
-  * Secret Key
-  * Default Region
-  * ...
+* Clearly distinguished architectural and operational differences between **Lambda** and **EC2** across multiple dimensions:
+  * Infrastructure management responsibilities
+  * Cost models and billing structures
+  * Scalability characteristics and operational flexibility
 
-* Used AWS CLI to perform basic operations such as:
+#### 2. Proficiency with AWS CLI
 
-  * Check account & configuration information
-  * Retrieve the list of regions
-  * View EC2 service
-  * Create and manage key pairs
-  * Check information about running services
-  * ...
+* Successfully installed and configured the **AWS CLI** on a personal machine using appropriate IAM User credentials.
 
-* Acquired the ability to connect between the web interface and CLI to manage AWS resources in parallel.
-* ...
+* Demonstrated practical expertise with essential CLI commands:
+  * Enumeration of S3 bucket resources
+  * Creation and retrieval of Lambda function metadata
+  * Management of AWS cloud resources
+  
+* Acquired comprehensive understanding of AWS CLI request mechanisms and authentication protocols utilizing Access Key/Secret Key pairs.
+
+#### 3. Practical Deployment Experience: Java Functions to AWS Lambda via CLI
+
+* Constructed a Java project using **Maven** framework, implemented handler classes, and generated executable .jar artifacts.
+
+* Successfully executed Lambda function deployment using the `aws lambda create-function` command for function upload and publication.
+
+* Configured and assigned appropriate **IAM Role** policies to facilitate Lambda function execution with necessary permissions.
+
+* Validated function operational integrity through systematic testing procedures.

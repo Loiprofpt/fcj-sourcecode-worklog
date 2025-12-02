@@ -12,48 +12,54 @@ pre: " <b> 1.7. </b> "
 
 ### Mục tiêu tuần 7:
 
-* Kết nối, làm quen với các thành viên trong First Cloud Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+* Nắm vững các kiến thức toàn diện về **AWS Lambda** và vai trò của nó trong các kiến trúc điện toán không máy chủ (serverless).
+* Phát triển kỹ năng **cài đặt, cấu hình AWS CLI** và triển khai các hàm Java lên Lambda.
+* Hiểu rõ các mô hình tích hợp giữa **API Gateway** và **AWS Lambda** để xây dựng các API backend có khả năng mở rộng.
 
 ### Các công việc cần triển khai trong tuần này:
 | Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
 | --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| Thứ Hai | - Tổng quan về AWS Lambda: các khái niệm cốt lõi, nguyên tắc kiến trúc, lợi ích của mô hình serverless và luồng thực thi hàm | 20/10/2025 | 20/10/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| Thứ Ba | - Khám phá AWS CLI: chức năng, quy trình cài đặt, cấu hình IAM User để truy cập AWS account và cú pháp lệnh cơ bản | 21/10/2025 | 21/10/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| Thứ Tư | - Thực hành cài đặt AWS CLI trên máy cá nhân, cấu hình thông tin đăng nhập, và kiểm tra với các lệnh quản lý tài nguyên (S3, EC2, Lambda) | 22/10/2025 | 22/10/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| Thứ Năm | - Học quy trình triển khai hàm Java lên AWS Lambda: chuẩn bị dự án Maven, đóng gói tệp .jar và tạo/tải lên hàm qua AWS CLI | 23/10/2025 | 23/10/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| Thứ Sáu | - Thực hành triển khai hàm Java lên Lambda thông qua AWS CLI, cấu hình vai trò IAM thích hợp, và kiểm tra hoạt động của hàm | 24/10/2025 | 24/10/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| Thứ Bảy | - Tìm hiểu cách API Gateway tích hợp với AWS Lambda để phát triển API backend; cấu hình các endpoint và kiểm tra lệnh gọi API | 25/10/2025 | 25/10/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| Chủ Nhật | - Tổng hợp kiến thức về mối quan hệ giữa Lambda, API Gateway và AWS CLI; ghi chép quy trình triển khai và chuẩn bị báo cáo tuần | 26/10/2025 | 26/10/2025      | <https://cloudjourney.awsstudygroup.com/> |
 
 
 ### Kết quả đạt được tuần 7:
 
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+#### 1. Hiểu Biết Toàn Diện về AWS Lambda
 
-* Đã tạo và cấu hình AWS Free Tier account thành công.
+* Nắm vững các khái niệm cơ bản và vai trò của **AWS Lambda** trong các mô hình điện toán không máy chủ.
 
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
+* Hiểu rõ cơ chế hoạt động của Lambda bao gồm quá trình kích hoạt, vòng đời thực thi hàm và cách trả về kết quả.
 
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
+* Phân biệt rõ ràng các khác biệt kiến trúc và hoạt động giữa **Lambda** và **EC2** trên nhiều khía cạnh:
+  * Trách nhiệm quản lý cơ sở hạ tầng
+  * Các mô hình chi phí và cấu trúc lập hóa đơn
+  * Các đặc tính khả năng mở rộng và linh hoạt hoạt động
 
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
+#### 2. Thành Thạo Sử Dụng AWS CLI
 
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
+* Cài đặt và cấu hình thành công **AWS CLI** trên máy cá nhân sử dụng thông tin xác thực IAM User phù hợp.
 
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
+* Thể hiện kinh nghiệm thực tế với các lệnh CLI thiết yếu:
+  * Liệt kê các tài nguyên S3 bucket
+  * Tạo và truy xuất siêu dữ liệu hàm Lambda
+  * Quản lý các tài nguyên đám mây AWS
+  
+* Hiểu toàn diện về cơ chế yêu cầu AWS CLI và các giao thức xác thực sử dụng các cặp Access Key/Secret Key.
+
+#### 3. Kinh Nghiệm Thực Tế: Triển Khai Hàm Java lên AWS Lambda qua CLI
+
+* Xây dựng dự án Java sử dụng framework **Maven**, triển khai các lớp handler và tạo ra các tạo tác .jar có thể thực thi được.
+
+* Thực hiện thành công triển khai hàm Lambda sử dụng lệnh `aws lambda create-function` để tải lên và xuất bản hàm.
+
+* Cấu hình và gán các chính sách **IAM Role** thích hợp để tạo điều kiện thực thi hàm Lambda với các quyền cần thiết.
+
+* Xác thực tính toàn vẹn hoạt động của hàm thông qua các quy trình kiểm tra có hệ thống.
 
 
