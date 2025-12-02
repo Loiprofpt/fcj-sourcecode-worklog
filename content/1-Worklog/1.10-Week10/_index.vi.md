@@ -8,8 +8,8 @@ pre: " <b> 1.10. </b> "
 
 ### Mục tiêu tuần 10:
 
-* Thành thạo **các nguyên tắc Infrastructure as Code (IaC)** sử dụng **Terraform** để cấp phát cơ sở hạ tầng khai báo.
-* Phát triển thành thạo **GitHub Actions** để triển khai các quy trình tự động hóa Tích hợp Liên tục/Triển khai Liên tục (CI/CD) toàn diện.
+* Học **các nguyên tắc Infrastructure as Code (IaC)** sử dụng **Terraform** để cấp phát cơ sở hạ tầng khai báo.
+* Phát triển thêm **GitHub Actions** để triển khai các quy trình tự động hóa Tích hợp Liên tục/Triển khai Liên tục (CI/CD) toàn diện.
 * Tích hợp Terraform và GitHub Actions để thiết lập các đường ống triển khai cơ sở hạ tầng tự động.
 * Thiết lập một khuôn khổ **quy trình DevOps nền tảng** hỗ trợ cơ sở hạ tầng và yêu cầu triển khai của dự án nhóm.
 
@@ -27,15 +27,15 @@ pre: " <b> 1.10. </b> "
 
 #### 1. Thành Thạo Infrastructure as Code với Terraform
 
-* Thành công nắm vững kiến thức toàn diện về framework **Terraform** để định nghĩa và quản lý cơ sở hạ tầng đám mây thông qua cấu hình khai báo.
+* Thành công nắm kiến thức toàn diện về framework **Terraform** để định nghĩa và quản lý cơ sở hạ tầng đám mây thông qua cấu hình khai báo.
 
 * Phát triển sự hiểu biết kỹ lưỡng về các khái niệm cốt lõi của Terraform bao gồm lựa chọn nhà cung cấp, định nghĩa tài nguyên, cơ chế quản lý trạng thái và tham số hóa biến số.
 
-* Thể hiện thành thạo thực tế trong việc viết, xác thực và triển khai các cấu hình Terraform để cấp phát cơ sở hạ tầng.
+* Thể hiện thực tế trong việc viết, xác thực và triển khai các cấu hình Terraform để cấp phát cơ sở hạ tầng.
 
 #### 2. Triển Khai GitHub Actions CI/CD
 
-* Thiết lập hiểu biết vững chắc về kiến trúc **GitHub Actions** bao gồm điều phối quy trình công việc, thực thi công việc, cấu hình người chạy và cú pháp quy trình công việc YAML.
+* Thiết lập, hiểu về kiến trúc **GitHub Actions** bao gồm điều phối quy trình công việc, thực thi công việc, cấu hình người chạy và cú pháp quy trình công việc YAML.
 
 * Thành công thiết kế và triển khai các cấu hình đường ống CI/CD chức năng cho phép các quy trình xây dựng, kiểm tra và triển khai tự động.
 

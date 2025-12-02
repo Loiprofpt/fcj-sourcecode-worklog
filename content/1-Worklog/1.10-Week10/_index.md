@@ -8,7 +8,7 @@ pre: " <b> 1.10. </b> "
 
 ### Week 10 Objectives:
 
-* Master **Infrastructure as Code (IaC) principles** using **Terraform** for declarative infrastructure provisioning.
+* Learn **Infrastructure as Code (IaC) principles** using **Terraform** for declarative infrastructure provisioning.
 * Develop proficiency in **GitHub Actions** for implementing comprehensive Continuous Integration/Continuous Deployment (CI/CD) automation workflows.
 * Integrate Terraform and GitHub Actions to establish automated infrastructure deployment pipelines.
 * Establish a foundational **DevOps workflow framework** supporting the group project's infrastructure and deployment requirements.
