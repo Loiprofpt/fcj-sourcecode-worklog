@@ -5,54 +5,38 @@ weight: 1
 chapter: false
 pre: " <b> 1.6. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
+
 
 
 ### Mục tiêu tuần 6:
 
-* Kết nối, làm quen với các thành viên trong First Cloud Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+* Nắm vững các **khái niệm cơ bản và mô hình kiến trúc của Kiến trúc Microservice**.
+* Phát triển kỹ năng **giao tiếp giữa các dịch vụ** sử dụng **gRPC** và **Apache Kafka**.
+* Tổng hợp và củng cố kiến thức tích luỹ từ tuần 1-6 để chuẩn bị cho **kỳ thi giữa kỳ**.
+* Thiết kế một **sơ đồ kiến trúc hệ thống chi tiết cho dự án nhóm** minh họa các tương tác và đường truyền thông giữa các dịch vụ.
 
 ### Các công việc cần triển khai trong tuần này:
 | Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
 | --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| Thứ Hai | - Ôn tập và so sánh kiến trúc Monolithic với kiến trúc Microservice <br> - Học tập các nguyên tắc thiết kế Microservice cơ bản                                                            | 13/10/2025   | 13/10/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| Thứ Ba | - Khám phá **gRPC**: các khái niệm cơ bản, cơ chế giao tiếp và Protocol Buffers                                                                                                             | 14/10/2025   | 14/10/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| Thứ Tư | - Tìm hiểu **Apache Kafka**: kiến trúc, các trường hợp sử dụng và ứng dụng thực tế                                                                                                        | 15/10/2025   | 15/10/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| Thứ Năm | - Khảo sát các chiến lược tích hợp **gRPC** và **Kafka** trong hệ sinh thái microservice                                                                                                    | 16/10/2025   | 16/10/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| Thứ Sáu | - Tổng hợp và ôn tập kiến thức đã thu lợi từ tuần 1 đến tuần 6                                                                                                                            | 17/10/2025   | 17/10/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| Thứ Bảy | - Bắt đầu phát triển **sơ đồ kiến trúc hệ thống cho dự án nhóm**                                                                                                                          | 18/10/2025   | 18/10/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| Chủ Nhật | - Hoàn thiện sơ đồ kiến trúc hệ thống <br> - Tài liệu hóa và biên soạn **báo cáo worklog tuần 6**                                                                                        | 19/10/2025   | 19/10/2025      | <https://cloudjourney.awsstudygroup.com/> |
 
 
 ### Kết quả đạt được tuần 6:
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
 
-* Đã tạo và cấu hình AWS Free Tier account thành công.
+* Phát triển sự hiểu biết toàn diện về các sự khác biệt giữa các mô hình kiến trúc **Monolithic** và **Microservice**.
 
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
+* Nắm vững các công nghệ **gRPC** và **Kafka** cùng với các vai trò tương ứng của chúng trong các hệ thống phân tán.
 
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
+* Thành thạo trong việc tích hợp các thành phần **gRPC** và **Kafka** trong kiến trúc hệ thống dựa trên microservice.
 
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
+* Hoàn thành thành công **sơ đồ kiến trúc hệ thống cho dự án nhóm**, minh họa các luồng giao tiếp giữa các dịch vụ.
 
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
+* Chuẩn bị đầy đủ cho **kỳ thi giữa kỳ** thông qua ôn tập có hệ thống và tổng hợp tất cả các tài liệu học tập trước đó.
 
 
