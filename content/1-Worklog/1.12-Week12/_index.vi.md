@@ -8,58 +8,68 @@ pre: " <b> 1.12 </b> "
 
 ### Mục tiêu tuần 12:
 
-* Tạo điều kiện **kiểm tra tích hợp hệ thống toàn diện và xác thực** trên tất cả các thành phần dự án.
-* Thực hiện và phân phối **trình diễn dự án được đánh bóng và thành công** cho các bên liên quan.
-* Phát triển **tài liệu trình bày chuyên nghiệp** ghi lại cơ sở hạ tầng, tự động hóa triển khai và kiến trúc hệ thống.
-* Tổng hợp **tất cả các đóng góp và kết quả đầu ra cá nhân** vào tài liệu toàn diện.
-* Hoàn thiện **tài liệu worklog và báo cáo kỹ thuật** tóm tắt toàn bộ kinh nghiệm thực tập.
+* Tiến hành **kiểm tra tích hợp hệ thống end-to-end** xác thực phần cứng phát hiện cồn với backend đám mây và ứng dụng thực thi.
+* Tối ưu hóa **phần mềm nhúng ESP32 và độ chính xác cảm biến cồn** để phát hiện chính xác vi phạm giao thông.
+* Thực hiện **trình diễn hệ thống toàn diện** trưng bày giám sát nồng độ cồn tích hợp từ phần cứng đến bảng điều khiển thực thi.
+* Chuẩn bị **tài liệu kỹ thuật phần cứng và quy trình triển khai** cho việc triển khai thực địa.
+* Hoàn thiện **worklog thực tập và báo cáo dự án** ghi chép kinh nghiệm phát triển 12 tuần hoàn chỉnh.
 
 ### Các công việc cần triển khai trong tuần này:
 | Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
 | --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| Thứ Hai   | - Tiến hành kiểm tra hệ thống backend hợp tác với các thành viên nhóm và xác thực toàn diện cơ sở hạ tầng được triển khai qua Terraform                                                                                                  | 11/24/2025   | 11/24/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| Thứ Ba   | - Thực hiện kiểm tra trình diễn hệ thống end-to-end hoàn chỉnh và xác minh tất cả các thành phần được tích hợp                                              | 11/25/2025   | 11/25/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| Thứ Tư   | - Phát triển tài liệu trình bày toàn diện bao gồm kiến trúc cơ sở hạ tầng, phương pháp triển khai Terraform và chiến lược tự động hóa CI/CD | 11/26/2025   | 11/26/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| Thứ Năm   | - Tiến hành kiểm tra trình diễn hệ thống đầy đủ và diễn tập toàn diện                            | 11/27/2025   | 11/27/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| Thứ Sáu   | - Biên soạn tài liệu worklog tuần 12 và hoàn thiện tóm tắt toàn diện về các đóng góp và thành tích cá nhân                                                                                     | 11/28/2025   | 11/28/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| Thứ Hai   | - Kiểm tra phần cứng cuối cùng và tối ưu hóa phần mềm ESP32; xác thực độ chính xác cảm biến cồn và kết nối với hệ thống thực thi                                                                                                  | 11/24/2025   | 11/24/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| Thứ Ba   | - Thực hiện kiểm tra hệ thống end-to-end hoàn chỉnh: phát hiện nồng độ cồn → truyền dữ liệu thời gian thực đến đám mây → xác minh bảng điều khiển thực thi                                              | 11/25/2025   | 11/25/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| Thứ Tư   | - Phát triển slide trình bày bao gồm: thiết kế phần cứng ESP32, thông số cảm biến cồn, triển khai phần mềm nhúng, và tổng quan hệ thống giám sát giao thông | 11/26/2025   | 11/26/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| Thứ Năm   | - Chuẩn bị và thực hiện trình diễn hệ thống hoàn chỉnh: phát hiện cồn trực tiếp, báo cáo vi phạm thời gian thực, và bảng điều khiển lực lượng thực thi                            | 11/27/2025   | 11/27/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| Thứ Sáu   | - Hoàn thành tài liệu worklog tuần 12, biên soạn thông số kỹ thuật phần cứng cho thực thi giao thông, và hoàn thiện báo cáo tóm tắt thực tập                                                                                     | 11/28/2025   | 11/28/2025      | <https://cloudjourney.awsstudygroup.com/> |
 
 
 ### Kết quả đạt được tuần 12:
 
-#### 1. Kiểm Tra Tích Hợp Hệ Thống Thành Công
+#### 1. Tích Hợp Phần Cứng-Đám Mây và Hệ Thống Thực Thi Giao Thông
 
-* Tạo điều kiện **kiểm tra tích hợp hệ thống toàn diện**, xác thực tất cả các thành phần backend và các tương tác của chúng.
+* Thành công **tích hợp phần cứng IoT với hệ thống backend đám mây** đạt được phát hiện cồn liền mạch và báo cáo vi phạm:
+  * Microcontroller ESP32 kết nối với cơ sở hạ tầng đám mây qua giao thức MQTT bảo mật
+  * Cảm biến nồng độ cồn, cảm biến nhiệt độ, và mô-đun nhận dạng vân tay truyền dữ liệu phát hiện
+  * Dữ liệu phát hiện nồng độ cồn thời gian thực chảy từ phần cứng qua dịch vụ đám mây đến bảng điều khiển thực thi
+  * Xác thực đầy đủ đường dẫn truyền dữ liệu từ phát hiện vật lý đến hồ sơ vi phạm
+  * Xác nhận ổn định hệ thống và độ tin cậy dưới hoạt động giám sát giao thông liên tục
 
-* Thành công xác thực tính ổn định và độ tin cậy của cơ sở hạ tầng được triển khai qua Terraform trong các điều kiện trình diễn.
+#### 2. Kiểm Tra Hệ Thống Phát Hiện Cồn Toàn Diện
 
-* Đảm bảo tất cả các thành phần cơ sở hạ tầng hoạt động gắn kết trong kiến trúc hệ thống hoàn chỉnh.
+* Thực hiện **kiểm tra hệ thống end-to-end hoàn chỉnh** xác thực độ chính xác phát hiện cồn và quy trình thực thi:
+  * **Lớp phần cứng**: Xác thực độ chính xác cảm biến cồn, tính nhất quán hiệu chuẩn, kết nối WiFi, và quản lý điện năng
+  * **Độ chính xác phát hiện**: Xác minh dữ liệu nồng độ cồn khớp với tiêu chuẩn hiệu chuẩn và thiết bị kiểm tra
+  * **Truyền dữ liệu đám mây**: Xác minh luồng dữ liệu vi phạm thời gian thực từ ESP32 đến hệ thống thực thi với độ trễ tối thiểu
+  * **Tích hợp bảng điều khiển**: Xác nhận cập nhật bảng điều khiển thực thi trực tiếp hiển thị vi phạm phát hiện thời gian thực
+  * **Độ tin cậy hệ thống**: Kiểm tra hiệu suất hệ thống dưới giám sát giao thông liên tục và các điều kiện môi trường khác nhau
 
-#### 2. Trình Diễn Dự Án Chuyên Nghiệp
+#### 3. Trình Diễn Thực Thi Giao Thông Chuyên Nghiệp
 
-* **Thực hiện thành công trình diễn dự án nhóm**, trưng bày tất cả các chức năng được triển khai phù hợp với các thông số kỹ thuật dự án ban đầu.
+* Phát hành **trình diễn hệ thống tích hợp hoàn chỉnh** trưng bày ứng dụng phát hiện cồn và thực thi vi phạm giao thông:
+  * Thu thập và hiển thị trực tiếp dữ liệu nồng độ cồn từ phần cứng phát hiện
+  * Phát hiện vi phạm thời gian thực và báo cáo đến bảng điều khiển thực thi
+  * Bảng điều khiển thực thi chuyên nghiệp hiển thị chi tiết vi phạm, hồ sơ vân tay tài xế, và lịch sử vi phạm
+  * Trình diễn độ tin cậy hệ thống và khả năng đáp ứng thời gian thực cho thực thi luật giao thông
+  * Trưng bày tích hợp phần cứng-đám mây sẵn sàng triển khai thực địa
 
-* Trình diễn khả năng hệ thống cho các bên liên quan với phạm vi bao quát quy trình công việc end-to-end toàn diện.
+#### 4. Tài Liệu Kỹ Thuật Phần Cứng cho Thực Thi
 
-* Xác thực hiệu suất và độ tin cậy hệ thống trong các kịch bản trình diễn.
+* Tạo **tài liệu toàn diện về phần cứng và hệ thống**:
+  * **Thông số ESP32**: Chân, yêu cầu điện năng, giao thức giao tiếp, và thông số kỹ thuật
+  * **Tài liệu cảm biến cồn**: Tờ dữ liệu cảm biến, quy trình hiệu chuẩn, thông số độ chính xác, và yêu cầu bảo trì
+  * **Thiết kế mạch**: Sơ đồ nối dây, thông số kỹ thuật thành phần, và bố trí mạch cho thiết bị thực địa
+  * **Tài liệu phần mềm nhúng**: Cấu trúc code, thuật toán phát hiện cồn, tài liệu driver, và quy trình triển khai
+  * **Quy trình triển khai thực địa**: Hướng dẫn thiết lập phần cứng từng bước, hiệu chuẩn, và tích hợp với hệ thống thực thi
 
-#### 3. Tài Liệu Trình Bày Toàn Diện
+#### 5. Hoàn Thành Dự Án và Tóm Tắt Thực Tập
 
-* Phát triển **tài liệu trình bày chuyên nghiệp và chặt chẽ về mặt kỹ thuật** bao gồm:
-  * **Sơ Đồ Kiến Trúc Cơ Sở Hạ Tầng**: Biểu diễn trực quan chi tiết về các dịch vụ AWS được triển khai và các mối quan hệ thành phần
-  * **Phương Pháp Triển Khai Terraform**: Tài liệu về các thực tiễn infrastructure-as-code và quy trình triển khai
-  * **Chiến Lược Tự Động Hóa CI/CD**: Tổng quan toàn diện về triển khai quy trình công việc GitHub Actions và lợi ích
-
-#### 4. Hoàn Thành Đóng Góp Cá Nhân
-
-* Hoàn thiện tất cả các kết quả đầu ra kỹ thuật cá nhân:
-  * **Cấu Hình Terraform**: Các module infrastructure-as-code sẵn sàng sản xuất
-  * **Đường Ống CI/CD**: Các quy trình triển khai tự động đảm bảo cấp phát cơ sở hạ tầng đáng tin cậy
-  * **Tài Liệu Triển Khai**: Tài liệu kỹ thuật toàn diện về các quy trình triển khai và cấu hình
-
-#### 5. Hoàn Thiện Tài Liệu
-
-* Hoàn thành **worklog tuần 12 toàn diện** ghi lại các hoạt động tuần cuối cùng và các mốc hoàn thành hệ thống.
-
-* **Nộp đầy đủ tất cả các báo cáo và tài liệu thực tập được yêu cầu**, cung cấp hồ sơ kỹ thuật hoàn chỉnh về kinh nghiệm thực tập và thành tích.
+* Thành công **hoàn thành hệ thống thực thi vi phạm giao thông IoT** kết thúc thực tập 12 tuần:
+  * Phát hành hệ thống tích hợp phần cứng-đám mây phát hiện cồn đầy đủ chức năng sẵn sàng triển khai thực địa
+  * Hoàn thành tất cả quy trình phát triển phần mềm nhúng, kiểm tra, và xác thực độ chính xác thực thi
+  * Tạo tài liệu toàn diện bao gồm thiết kế phần cứng, phát hiện cồn, và tích hợp hệ thống
+  * Chuẩn bị tài liệu trình bày chuyên nghiệp ghi chép thiết kế dự án và triển khai thực thi giao thông
+  * Hoàn thành worklog thực tập chi tiết phản ánh 12 tuần kinh nghiệm phát triển phần cứng IoT cho thực thi
+  * Trình diễn phát hành dự án hoàn chỉnh từ thiết kế phần cứng đến hệ thống giám sát vi phạm giao thông hoạt động
 
 
