@@ -12,48 +12,47 @@ pre: " <b> 1.10. </b> "
 
 ### Mục tiêu tuần 10:
 
-* Kết nối, làm quen với các thành viên trong First Cloud Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+* Thành thạo **các nguyên tắc Infrastructure as Code (IaC)** sử dụng **Terraform** để cấp phát cơ sở hạ tầng khai báo.
+* Phát triển thành thạo **GitHub Actions** để triển khai các quy trình tự động hóa Tích hợp Liên tục/Triển khai Liên tục (CI/CD) toàn diện.
+* Tích hợp Terraform và GitHub Actions để thiết lập các đường ống triển khai cơ sở hạ tầng tự động.
+* Thiết lập một khuôn khổ **quy trình DevOps nền tảng** hỗ trợ cơ sở hạ tầng và yêu cầu triển khai của dự án nhóm.
 
 ### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| Thứ | Công việc                                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
+| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
+| Thứ Hai   | - Học các nguyên tắc cơ bản Terraform: cấu hình nhà cung cấp, định nghĩa tài nguyên, quản lý trạng thái và tham số hóa biến số                                                                                 | 11/10/2025 | 11/10/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| Thứ Ba   | - Thực hiện các bài tập thực tế viết cấu hình Terraform và quản lý các hoạt động vòng đời cơ sở hạ tầng                                              | 11/11/2025 | 11/11/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| Thứ Tư   | - Học kiến trúc GitHub Actions: thiết kế quy trình công việc, điều phối công việc, cấu hình người chạy và các nguyên tắc cơ bản cú pháp YAML | 11/12/2025 | 11/12/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| Thứ Năm   | - Thiết kế và triển khai các cấu hình đường ống CI/CD sử dụng GitHub Actions cho các quy trình triển khai tự động                            | 11/13/2025 | 11/13/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| Thứ Sáu   | - Thực hiện cấp phát cơ sở hạ tầng dự án sử dụng Terraform và xác thực tính nhất quán triển khai                                                                                     | 11/14/2025 | 11/14/2025      | <https://cloudjourney.awsstudygroup.com/> |
 
 
 ### Kết quả đạt được tuần 10:
 
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+#### 1. Thành Thạo Infrastructure as Code với Terraform
 
-* Đã tạo và cấu hình AWS Free Tier account thành công.
+* Thành công nắm vững kiến thức toàn diện về framework **Terraform** để định nghĩa và quản lý cơ sở hạ tầng đám mây thông qua cấu hình khai báo.
 
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
+* Phát triển sự hiểu biết kỹ lưỡng về các khái niệm cốt lõi của Terraform bao gồm lựa chọn nhà cung cấp, định nghĩa tài nguyên, cơ chế quản lý trạng thái và tham số hóa biến số.
 
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
+* Thể hiện thành thạo thực tế trong việc viết, xác thực và triển khai các cấu hình Terraform để cấp phát cơ sở hạ tầng.
 
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
+#### 2. Triển Khai GitHub Actions CI/CD
 
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
+* Thiết lập hiểu biết vững chắc về kiến trúc **GitHub Actions** bao gồm điều phối quy trình công việc, thực thi công việc, cấu hình người chạy và cú pháp quy trình công việc YAML.
 
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
+* Thành công thiết kế và triển khai các cấu hình đường ống CI/CD chức năng cho phép các quy trình xây dựng, kiểm tra và triển khai tự động.
+
+#### 3. Tích Hợp Terraform và GitHub Actions
+
+* Thành công tích hợp Terraform với GitHub Actions để tạo các đường ống triển khai cơ sở hạ tầng tự động, cho phép cấp phát cơ sở hạ tầng liền mạch thông qua các quy trình công việc được kiểm soát phiên bản.
+
+#### 4. Thiết Lập Quy Trình DevOps
+
+* Thiết lập một khuôn khổ **quy trình DevOps nền tảng** hỗ trợ tự động hóa cơ sở hạ tầng, các thực tiễn tích hợp/triển khai liên tục và hiệu quả hoạt động cho dự án nhóm.
+
+#### 5. Triển Khai Cơ Sở Hạ Tầng Dự Án
+
+* Thành công cấp phát và triển khai cơ sở hạ tầng dự án ban đầu sử dụng Terraform, thiết lập một nền tảng cơ sở hạ tầng có thể tái sử dụng và được kiểm soát phiên bản.
 
 
