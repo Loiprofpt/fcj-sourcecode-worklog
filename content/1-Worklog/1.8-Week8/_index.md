@@ -5,53 +5,48 @@ weight: 1
 chapter: false
 pre: " <b> 1.8. </b> "
 ---
-{{% notice warning %}} 
-⚠️ **Note:** The following information is for reference purposes only. Please **do not copy verbatim** for your own report, including this warning.
-{{% /notice %}}
-
 
 ### Week 8 Objectives:
 
-* Connect and get acquainted with members of First Cloud Journey.
-* Understand basic AWS services, how to use the console & CLI.
+* Finalize the **comprehensive group project proposal** with strategic clarity and technical depth.
+* Conduct systematic review and consolidation of **foundational AWS architecture concepts** in preparation for the midterm examination.
+* Address and reinforce areas of technical uncertainty to ensure comprehensive subject mastery.
 
 ### Tasks to be carried out this week:
-| Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Get acquainted with FCJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 08/11/2025 | 08/11/2025      |
-| 3   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                              | 08/12/2025 | 08/12/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 08/13/2025 | 08/13/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - SSH connection methods to EC2 <br> - Learn about Elastic IP   <br>                            | 08/14/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 08/15/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-
+| Day | Task                                                                                                                                                                                     | Start Date | Completion Date | Reference Material                       |
+| --- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- | ---------------- | ---------------------------------------- |
+| Mon   | - Finalize the group project proposal <br> - Review AWS security architecture design principles: <br>&emsp; + Identity & Access Management (IAM), Multi-Factor Authentication (MFA), Service Control Policies (SCP) <br>&emsp; + Encryption mechanisms (KMS, TLS/ACM), Security Groups, Network Access Control Lists (NACLs) <br>&emsp; + Detective controls (GuardDuty, Shield, WAF), Secrets Management | 27/10/2025  | 27/10/2025       | <https://cloudjourney.awsstudygroup.com/> |
+| Tue   | - Review resilience and high-availability architecture design patterns: <br>&emsp; + Multi-Availability Zone (AZ) strategies, Multi-Region deployment models <br>&emsp; + Disaster Recovery (DR) strategies and recovery planning <br>&emsp; + Automated scaling mechanisms, DNS management (Route 53), Load distribution <br>&emsp; + Data protection and restoration procedures | 28/10/2025  | 28/10/2025       | <https://cloudjourney.awsstudygroup.com/> |
+| Wed   | - Review high-performance system optimization principles: <br>&emsp; + Compute scaling (EC2 Auto Scaling, AWS Lambda, AWS Fargate) <br>&emsp; + Storage optimization (S3, Elastic File System, Elastic Block Store) <br>&emsp; + Content delivery and acceleration (CloudFront, Global Accelerator, caching strategies) | 29/10/2025  | 29/10/2025       | <https://cloudjourney.awsstudygroup.com/> |
+| Thu   | - Review cost optimization methodologies and tools: <br>&emsp; + Cost analysis and forecasting (Cost Explorer, Budget management) <br>&emsp; + Purchasing strategies (Savings Plans, Reserved Instances) <br>&emsp; + Resource lifecycle optimization and data tiering strategies | 30/10/2025  | 30/10/2025       | <https://cloudjourney.awsstudygroup.com/> |
+| Fri   | - Participate in the FCJ midterm examination assessment. | 31/10/2025  | 31/10/2025       | <https://cloudjourney.awsstudygroup.com/> |
 
 ### Week 8 Achievements:
 
-* Understood what AWS is and mastered the basic service groups: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+#### 1. Completion of Group Project Proposal
 
-* Successfully created and configured an AWS Free Tier account.
+* Successfully finalized the group proposal with well-articulated content, cohesive structure, and comprehensive alignment with project specifications and requirements.
 
-* Became familiar with the AWS Management Console and learned how to find, access, and use services via the web interface.
+#### 2. Mastery of AWS Security Architecture Design
 
-* Installed and configured AWS CLI on the computer, including:
-  * Access Key
-  * Secret Key
-  * Default Region
-  * ...
+* Comprehensively reviewed and reinforced knowledge of AWS security design frameworks encompassing Identity Access Management (IAM) fundamentals, Multi-Factor Authentication protocols, Service Control Policies implementation, and encryption technologies (KMS, TLS/ACM).
 
-* Used AWS CLI to perform basic operations such as:
+* Gained proficiency in network security controls including Security Groups, Network Access Control Lists, detective capabilities (GuardDuty, Shield, WAF), and secrets management infrastructure.
 
-  * Check account & configuration information
-  * Retrieve the list of regions
-  * View EC2 service
-  * Create and manage key pairs
-  * Check information about running services
-  * ...
+#### 3. Understanding of Resilience and High-Availability Architecture
 
-* Acquired the ability to connect between the web interface and CLI to manage AWS resources in parallel.
-* ...
+* Developed robust understanding of distributed system resilience principles emphasizing Multi-Availability Zone deployment strategies, Multi-Region architecture patterns, and comprehensive Disaster Recovery methodologies.
+
+* Mastered the implementation of Auto Scaling mechanisms, Route 53 DNS management, load distribution architectures, and data backup/restoration strategies to enhance system availability and operational continuity.
+
+#### 4. High-Performance System Design Optimization
+
+* Strengthened expertise in performance optimization leveraging compute scaling solutions (EC2 Auto Scaling, Lambda, Fargate), storage optimization strategies (S3, EFS, EBS), and content delivery acceleration technologies (CloudFront, Global Accelerator).
+
+#### 5. Cost Optimization Framework Understanding
+
+* Enhanced comprehension of AWS cost optimization strategies including expenditure analysis (Cost Explorer, Budgets), purchasing optimization (Savings Plans, Reserved Instances), and resource lifecycle management with intelligent data tiering.
+
+#### 6. Midterm Assessment Achievement
+
+* Successfully completed the FCJ midterm examination, demonstrating effective application and synthesis of all accumulated architectural and operational knowledge.
