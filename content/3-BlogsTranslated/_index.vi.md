@@ -7,8 +7,6 @@ pre: " <b> 3. </b> "
 ---
 
 
-Tại đây sẽ là phần liệt kê, giới thiệu các blogs mà các bạn đã dịch. Ví dụ:
-
 ###  [Blog 1 - Nâng cao quản trị AI Agent với Boomi và AWS: Cách tiếp cận thống nhất để quan sát và tuân thủ](3.1-Blog1/)
 Bài viết nhấn mạnh cách Agent Control Tower của Boomi tích hợp với Amazon Bedrock để giải quyết độ phức tạp ngày càng tăng trong việc quản lý các AI agent của doanh nghiệp. Giải pháp này cung cấp một control plane tập trung để đảm bảo observability toàn diện, quản trị (governance) và quản lý vòng đời (lifecycle management), giúp tổ chức giám sát hiệu suất agent và thực thi chính sách bảo mật trên các môi trường hybrid. Cách tiếp cận này hỗ trợ doanh nghiệp giảm thiểu "agent sprawl", đảm bảo tuân thủ quy định, và mở rộng hoạt động AI một cách tự tin trong khi tối ưu hóa ra quyết định và hiệu quả vận hành.
 ###  [Blog 2 - Tối ưu hóa thiết lập DNS hybrid với Amazon Route 53 Resolver endpoint metrics](3.2-Blog2/)

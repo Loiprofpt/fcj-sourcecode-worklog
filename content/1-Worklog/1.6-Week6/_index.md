@@ -6,8 +6,6 @@ chapter: false
 pre: " <b> 1.6. </b> "
 ---
 
-
-
 ### Week 6 Objectives:
 
 * Grasp the **fundamental concepts and architectural patterns of Microservice Architecture**.

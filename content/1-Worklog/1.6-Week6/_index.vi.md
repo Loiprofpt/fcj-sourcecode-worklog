@@ -6,8 +6,6 @@ chapter: false
 pre: " <b> 1.6. </b> "
 ---
 
-
-
 ### Mục tiêu tuần 6:
 
 * Nắm vững các **khái niệm cơ bản và mô hình kiến trúc của Kiến trúc Microservice**.
