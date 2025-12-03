@@ -1,0 +1,57 @@
+# Tên của quy trình
+name: Deploy Hugo Site to Pages
+
+on:
+  # Chạy khi có code mới đẩy lên nhánh master
+  push:
+    branches:
+      - master # Kiểm tra lại xem nhánh chính của bạn là 'master' hay 'main' nhé!
+  # Cho phép chạy thủ công từ tab Actions
+  workflow_dispatch:
+
+# Cấp quyền cho robot để nó được phép đăng bài
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Chỉ cho phép một lần deploy chạy tại một thời điểm
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  # Quy trình xây dựng (Build)
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          submodules: recursive # Lấy cả theme về (quan trọng)
+
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: 'latest'
+          extended: true # Dùng bản mở rộng để xử lý CSS/SCSS
+
+      - name: Build
+        run: hugo --minify
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v2
+        with:
+          path: ./public
+
+  # Quy trình đăng bài (Deploy)
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v2
