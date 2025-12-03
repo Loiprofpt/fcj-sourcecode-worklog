@@ -7,7 +7,7 @@ pre: " <b> 6. </b> "
 ---
 
 
-During my internship at **AWS Vietnam** from **September 6, 2025 to December 30, 2025**, I had the opportunity to gain practical experience and apply the knowledge acquired at university in a professional environment.  
+During my internship at **AWS Vietnam** from **September 9, 2025 to December 30, 2025**, I had the opportunity to gain practical experience and apply the knowledge acquired at university in a professional environment.  
 I worked as a **Learning Intern**, participating in various tasks and projects that helped me improve my skills in **cloud technologies, research, analysis, technical reporting, and communication**.  
 
 Regarding work ethic, I consistently aimed to complete assignments on time, followed workplace regulations, and actively collaborated with colleagues to enhance team efficiency.
