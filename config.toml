@@ -1,4 +1,4 @@
-baseURL = "https://loiprofpt.github.io/fcj-worklog-web/"
+baseURL = "https://Loiprofpt.github.io/fcj-sourcecode-worklog/" # Đã sửa dòng này cho đúng với repo hiện tại
 relativeURLs = true
 canonifyURLs = true
 
