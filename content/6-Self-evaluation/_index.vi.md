@@ -6,7 +6,7 @@ chapter: false
 pre: " <b> 6. </b> "
 ---
 
-Trong thời gian thực tập tại **AWS Vietnam** từ **06/09/2025 đến 30/12/2025**, tôi đã có cơ hội áp dụng kiến thức học được tại trường vào môi trường làm việc thực tế.  
+Trong thời gian thực tập tại **AWS Vietnam** từ **09/09/2025 đến 30/12/2025**, tôi đã có cơ hội áp dụng kiến thức học được tại trường vào môi trường làm việc thực tế.  
 Với vai trò **Thực tập sinh học tập**, tôi tham gia nhiều nhiệm vụ và dự án, giúp tôi nâng cao kỹ năng về **công nghệ cloud, nghiên cứu, phân tích, báo cáo kỹ thuật và giao tiếp**.  
 
 Về thái độ làm việc, tôi luôn cố gắng hoàn thành công việc đúng hạn, tuân thủ quy định của công ty, và tích cực phối hợp với đồng nghiệp nhằm nâng cao hiệu quả làm việc nhóm.
