@@ -1,125 +1,115 @@
 ---
 title: "Event 2"
-date: "2025-09-10"
-weight: 1
+date: "2025-09-09"
+weight: 2
 chapter: false
 pre: " <b> 4.2. </b> "
 ---
 
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
+# Summary Report: “AWS Cloud Mastery Series #3 – Security Pillar”
 
-# Bài thu hoạch “GenAI-powered App-DB Modernization workshop”
+### General Introduction
 
-### Mục Đích Của Sự Kiện
+**AWS Cloud Mastery Series #3 – Security Pillar** là một **workshop buổi sáng** được tổ chức vào **ngày 29 tháng 11 năm 2025** tại **Văn phòng AWS Việt Nam, Tòa Bitexco Financial, TP. Hồ Chí Minh**.  
+Sự kiện tập trung vào **trụ cột bảo mật trong AWS Well-Architected Framework**, cung cấp kiến thức chuyên sâu về **bảo mật, quản lý danh tính, phát hiện mối đe dọa, bảo vệ hạ tầng, bảo vệ dữ liệu và phản ứng sự cố**.  
+Workshop dành cho **developer, kiến trúc sư giải pháp và chuyên gia cloud** mong muốn nâng cao kỹ năng trong việc thiết kế **các workload AWS an toàn và bền vững**.
 
-- Chia sẻ best practices trong thiết kế ứng dụng hiện đại
-- Giới thiệu phương pháp DDD và event-driven architecture
-- Hướng dẫn lựa chọn compute services phù hợp
-- Giới thiệu công cụ AI hỗ trợ development lifecycle
+---
 
-### Danh Sách Diễn Giả
+### Event Objectives
 
-- **Jignesh Shah** - Director, Open Source Databases
-- **Erica Liu** - Sr. GTM Specialist, AppMod
-- **Fabrianne Effendi** - Assc. Specialist SA, Serverless Amazon Web Services
+- Hiểu rõ **nguyên tắc của trụ cột bảo mật trong AWS Well-Architected Framework**.  
+- Học các **best practice** về quản lý danh tính, giám sát và bảo vệ hạ tầng.  
+- Khám phá **mã hóa dữ liệu, quản lý secrets và tự động hóa phản ứng sự cố**.  
+- Nhận biết các **thực tiễn sai lầm phổ biến** và tình huống thực tế tại Việt Nam.  
+- Xây dựng lộ trình học tập nâng cao: **Security Specialty và Solutions Architect Professional**.
 
-### Nội Dung Nổi Bật
+---
 
-#### Đưa ra các ảnh hưởng tiêu cực của kiến trúc ứng dụng cũ
+### Event Schedule & Key Sessions
 
-- Thời gian release sản phẩm lâu → Mất doanh thu/bỏ lỡ cơ hội
-- Hoạt động kém hiệu quả → Mất năng suất, tốn kém chi phí
-- Không tuân thủ các quy định về bảo mật → Mất an ninh, uy tín
+#### 8:30 – 8:50 | Opening & Security Foundation
+- Vai trò của **Security Pillar** trong Well-Architected Framework.  
+- Nguyên tắc cốt lõi: *Least Privilege*, *Zero Trust*, *Defense in Depth*.  
+- Giải thích **Shared Responsibility Model**.  
+- Tổng quan **mối đe dọa phổ biến trong môi trường cloud tại Việt Nam**.
 
-#### Chuyển đổi sang kiến trúc ứng dụng mới - Microservice Architecture
+#### 8:50 – 9:30 | Pillar 1 – Identity & Access Management (IAM)
+- Kiến trúc IAM hiện đại: Users, Roles, Policies, tránh long-term credentials.  
+- IAM Identity Center: SSO và permission sets.  
+- Service Control Policies (SCPs) và permission boundaries cho multi-account.  
+- MFA, xoay vòng credentials và Access Analyzer.  
+- Mini demo: kiểm tra và mô phỏng quyền truy cập IAM.
 
-Chuyển đổi thành hệ thống modular – từng chức năng là một **dịch vụ độc lập** giao tiếp với nhau qua **sự kiện** với 3 trụ cột cốt lõi:
+#### 9:30 – 9:55 | Pillar 2 – Detection & Continuous Monitoring
+- Giám sát liên tục với **CloudTrail, GuardDuty và Security Hub**.  
+- Logging ở mọi tầng: VPC Flow Logs, ALB logs, S3 logs.  
+- Cảnh báo và tự động hóa với **EventBridge**.  
+- Detection-as-Code: tự động hóa cơ sở hạ tầng và quy tắc.
 
-- **Queue Management**: Xử lý tác vụ bất đồng bộ
-- **Caching Strategy:** Tối ưu performance
-- **Message Handling:** Giao tiếp linh hoạt giữa services
+#### 9:55 – 10:10 | Coffee Break
 
-#### Domain-Driven Design (DDD)
+#### 10:10 – 10:40 | Pillar 3 – Infrastructure Protection
+- Bảo mật mạng & workload: phân đoạn VPC, bố trí private/public.  
+- So sánh và ứng dụng **Security Groups vs NACLs**.  
+- Sử dụng **WAF, Shield, Network Firewall**.  
+- Bảo vệ workload cơ bản cho **EC2, ECS, EKS**.
 
-- **Phương pháp 4 bước**: Xác định domain events → sắp xếp timeline → identify actors → xác định bounded contexts
-- **Case study bookstore**: Minh họa cách áp dụng DDD thực tế
-- **Context mapping**: 7 patterns tích hợp bounded contexts
+#### 10:40 – 11:10 | Pillar 4 – Data Protection
+- Quản lý key với **KMS**: policies, grants, xoay vòng.  
+- Mã hóa dữ liệu tại-rest & in-transit: S3, EBS, RDS, DynamoDB.  
+- **Secrets Manager & Parameter Store** – patterns xoay vòng.  
+- Phân loại dữ liệu và thiết lập guardrails truy cập.
 
-#### Event-Driven Architecture
+#### 11:10 – 11:40 | Pillar 5 – Incident Response (IR)
+- Chu trình IR theo AWS.  
+- Playbook ví dụ:
+  - IAM key bị xâm phạm  
+  - S3 public exposure  
+  - EC2 nhiễm malware  
+- Snapshot, cách ly và thu thập bằng chứng.  
+- Tự động phản ứng bằng **Lambda** và **Step Functions**.
 
-- **3 patterns tích hợp**: Publish/Subscribe, Point-to-point, Streaming
-- **Lợi ích**: Loose coupling, scalability, resilience
-- **So sánh sync vs async**: Hiểu rõ trade-offs (sự đánh đổi)
+#### 11:40 – 12:00 | Wrap-Up & Q&A
+- Tổng kết 5 trụ cột bảo mật.  
+- Thảo luận các **thực tiễn sai lầm và tình huống thực tế tại Việt Nam**.  
+- Hướng dẫn lộ trình học tập nâng cao: **Security Specialty, SA Pro**.
 
-#### Compute Evolution
+---
 
-- **Shared Responsibility Model**: Từ EC2 → ECS → Fargate → Lambda
-- **Serverless benefits**: No server management, auto-scaling, pay-for-value
-- **Functions vs Containers**: Criteria lựa chọn phù hợp
+### Key Learnings
 
-#### Amazon Q Developer
+- Hiểu toàn diện về **nguyên tắc bảo mật AWS**.  
+- Nắm các phương pháp thực tiễn về **quản lý danh tính, giám sát và bảo vệ hạ tầng**.  
+- Hiểu cách **bảo vệ dữ liệu và tự động phản ứng sự cố**.  
+- Nhận thức được các **thực tiễn sai lầm phổ biến và cách khắc phục**.  
+- Xây dựng lộ trình học tập tiếp theo với **chứng chỉ bảo mật AWS**.
 
-- **SDLC automation**: Từ planning đến maintenance
-- **Code transformation**: Java upgrade, .NET modernization
-- **AWS Transform agents**: VMware, Mainframe, .NET migration
+---
 
-### Những Gì Học Được
+### Application in Work
 
-#### Tư Duy Thiết Kế
+- Áp dụng **best practice IAM** trong các dự án multi-account.  
+- Thiết lập **logging và monitoring tiêu chuẩn** cho workloads hiện tại.  
+- Lập kế hoạch **tự động phản ứng sự cố** bằng Lambda & Step Functions.  
+- Tích hợp **Well-Architected Security principles** khi đánh giá kiến trúc hạ tầng.
 
-- **Business-first approach**: Luôn bắt đầu từ business domain, không phải technology
-- **Ubiquitous language**: Importance của common vocabulary giữa business và tech teams
-- **Bounded contexts**: Cách identify và manage complexity trong large systems
+---
 
-#### Kiến Trúc Kỹ Thuật
+### Experience at the Event
 
-- **Event storming technique**: Phương pháp thực tế để mô hình hóa quy trình kinh doanh
-- Sử dụng **Event-driven communication** thay vì synchronous calls
-- **Integration patterns**: Hiểu khi nào dùng sync, async, pub/sub, streaming
-- **Compute spectrum**: Criteria chọn từ VM → containers → serverless
+- Tham gia **workshop tập trung và thực hành**, cung cấp kiến thức chuyên sâu về bảo mật cloud.  
+- Học hỏi trực tiếp từ **chuyên gia AWS và thực chiến trong ngành**.  
+- Nhận các **chiến lược thực tế** để bảo vệ hạ tầng và workloads.  
+- Nâng cao tự tin trong việc áp dụng **best practice bảo mật** vào dự án thực tế.
 
-#### Chiến Lược Hiện Đại Hóa
+---
 
-- **Phased approach**: Không rush, phải có roadmap rõ ràng
-- **7Rs framework**: Nhiều con đường khác nhau tùy thuộc vào đặc điểm của mỗi ứng dụng
-- **ROI measurement**: Cost reduction + business agility
+### Event Photos
 
-### Ứng Dụng Vào Công Việc
+![AWS Cloud Mastery Series #3 HCMC 1](/images/4-EventPaticipated/event2new.jpg)
 
-- **Áp dụng DDD** cho project hiện tại: Event storming sessions với business team
-- **Refactor microservices**: Sử dụng bounded contexts để identify service boundaries
-- **Implement event-driven patterns**: Thay thế một số sync calls bằng async messaging
-- **Serverless adoption**: Pilot AWS Lambda cho một số use cases phù hợp
-- **Try Amazon Q Developer**: Integrate vào development workflow để boost productivity
+---
 
-### Trải nghiệm trong event
-
-Tham gia workshop **“GenAI-powered App-DB Modernization”** là một trải nghiệm rất bổ ích, giúp tôi có cái nhìn toàn diện về cách hiện đại hóa ứng dụng và cơ sở dữ liệu bằng các phương pháp và công cụ hiện đại. Một số trải nghiệm nổi bật:
-
-#### Học hỏi từ các diễn giả có chuyên môn cao
-- Các diễn giả đến từ AWS và các tổ chức công nghệ lớn đã chia sẻ **best practices** trong thiết kế ứng dụng hiện đại.
-- Qua các case study thực tế, tôi hiểu rõ hơn cách áp dụng **Domain-Driven Design (DDD)** và **Event-Driven Architecture** vào các project lớn.
-
-#### Trải nghiệm kỹ thuật thực tế
-- Tham gia các phiên trình bày về **event storming** giúp tôi hình dung cách **mô hình hóa quy trình kinh doanh** thành các domain events.
-- Học cách **phân tách microservices** và xác định **bounded contexts** để quản lý sự phức tạp của hệ thống lớn.
-- Hiểu rõ trade-offs giữa **synchronous và asynchronous communication** cũng như các pattern tích hợp như **pub/sub, point-to-point, streaming**.
-
-#### Ứng dụng công cụ hiện đại
-- Trực tiếp tìm hiểu về **Amazon Q Developer**, công cụ AI hỗ trợ SDLC từ lập kế hoạch đến maintenance.
-- Học cách **tự động hóa code transformation** và pilot serverless với **AWS Lambda**, từ đó nâng cao năng suất phát triển.
-
-#### Kết nối và trao đổi
-- Workshop tạo cơ hội trao đổi trực tiếp với các chuyên gia, đồng nghiệp và team business, giúp **nâng cao ngôn ngữ chung (ubiquitous language)** giữa business và tech.
-- Qua các ví dụ thực tế, tôi nhận ra tầm quan trọng của **business-first approach**, luôn bắt đầu từ nhu cầu kinh doanh thay vì chỉ tập trung vào công nghệ.
-
-#### Bài học rút ra
-- Việc áp dụng DDD và event-driven patterns giúp giảm **coupling**, tăng **scalability** và **resilience** cho hệ thống.
-- Chiến lược hiện đại hóa cần **phased approach** và đo lường **ROI**, không nên vội vàng chuyển đổi toàn bộ hệ thống.
-- Các công cụ AI như Amazon Q Developer có thể **boost productivity** nếu được tích hợp vào workflow phát triển hiện tại.
-
-#### Một số hình ảnh khi tham gia sự kiện
-* Thêm các hình ảnh của các bạn tại đây
-> Tổng thể, sự kiện không chỉ cung cấp kiến thức kỹ thuật mà còn giúp tôi thay đổi cách tư duy về thiết kế ứng dụng, hiện đại hóa hệ thống và phối hợp hiệu quả hơn giữa các team.
+> **Conclusion:**  
+> Workshop cung cấp kiến thức chuyên sâu về **trụ cột bảo mật AWS**, nâng cao kỹ năng thực hành và hướng dẫn cách áp dụng **Well-Architected security principles** vào môi trường sản xuất. Nó nhấn mạnh tầm quan trọng của **hạ tầng cloud an toàn, tuân thủ và bền vững**.
