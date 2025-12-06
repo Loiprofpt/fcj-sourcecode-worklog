@@ -12,8 +12,8 @@ pre: " <b> 2.5 </b> "
 
 | Role | Name | Description |
 | :--- | :--- | :--- |
-| **Partner Executive Sponsor** | **[Instructor Name]** | Project Mentor / Supervisor at **FPT University HCMC**. Responsible for grading and academic guidance. |
-| **Project Stakeholder** | **[Customer / Traffic Dept]** | The end-user representative (e.g., Traffic Police Department) validating the system's practical applicability. |
+| **Partner Executive Sponsor** | **Nguyễn Gia Hưng** | Project Mentor / Supervisor at **First Cloud Journey & AWS Vietnam**. Responsible for guidance and technical mentorship. |
+| **Project Stakeholder** | **FPT University HCMC** | Academic institution validating the system's practical applicability and educational value. |
 
 ---
 
@@ -24,7 +24,7 @@ pre: " <b> 2.5 </b> "
 | Name | Role | Core Responsibilities |
 | :--- | :--- | :--- |
 | **Phạm Viết Lợi** | **IoT core & Firmware Engineer** | • **Hardware Architecture:** Component selection (ESP32, AS608, MQ-3) and circuit design.<br>• **Embedded Coding:** Developing C++/PlatformIO firmware for sensor reading and device logic.<br>• **Edge Security:** Implementing fingerprint auth flows on the device. |
-| **Đặng Đình Bắc** | **Cloud Architect (Backend)** | • **Serverless Computing:** Design and implementation of AWS Lambda functions.<br>• **Database Design:** DynamoDB schema modeling and optimization.<br>• **IaC:** Managing infrastructure via **Terraform** and **CodePipeline**. |
+| **Đặng Đình Bắc** | **Cloud Architect (Backend)** | • **Serverless Computing:** Design and implementation of AWS Lambda functions (Python).<br>• **Database Design:** DynamoDB schema modeling and optimization.<br>• **IaC:** Managing infrastructure via **Terraform** and **GitHub Actions**. |
 | **Trần Quốc Dinh** | **IoT Cloud & Fullstack Engineer** | • **IoT Connectivity:** Configuring AWS IoT Core, MQTT Topics, and Rules Engine.<br>• **Integration:** Bridging the gap between Edge devices and the Web Frontend.<br>• **Frontend Support:** Assisting in API integration and UI logic. |
 | **Dương Hải Nam** | **Frontend Developer** | • **UI/UX Design:** Creating the Public Lookup Portal and Admin Dashboard.<br>• **Web Development:** Building the SPA using **React/Vue.js**.<br>• **Deployment:** Configuring **AWS Amplify** hosting and CI/CD for the frontend. |
 
