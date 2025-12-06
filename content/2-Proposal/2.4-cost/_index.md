@@ -16,17 +16,15 @@ The following cost estimation is based on a **Pilot Phase workload** assumption 
 | :--- | :--- | :--- |
 | **AWS WAF** | **$6.00** | 1 Web ACL + 1 Rule Group (Essential for API security). |
 | **Amazon CloudWatch** | **$2.80** | ~5GB of Log ingestion & storage + 3 Alarm metrics. |
-| **AWS Amplify** | **$2.72** | Hosting, Build minutes (100 mins), and Data Transfer (20GB). |
+| **AWS Amplify** | **$2.72** | Hosting (with built-in CloudFront CDN), Build minutes (100 mins), and Data Transfer (20GB). |
 | **AWS IoT Core** | **$1.00** | Connectivity & Messaging costs for ~10,000 MQTT messages. |
-| **AWS CodePipeline** | **$1.00** | 1 Active Pipeline for Backend CI/CD (Terraform). |
-| **Amazon Route 53** | **$0.50** | 1 Hosted Zone for the custom domain. |
 | **AWS Lambda** | **$0.22** | Compute cost for ~25,000 invocations (Includes Free Tier buffer). |
 | **Amazon API Gateway** | **$0.07** | REST API calls (~20,000 requests). |
 | **Amazon DynamoDB** | **$0.02** | On-demand Read/Write capacity units (Highly efficient). |
-| **AWS CodeBuild** | **$0.00** | Included in Free Tier (100 build minutes/month). |
-| **TOTAL** | **~$14.33** | **Per Month** |
+| **GitHub Actions** | **$0.00** | Free for public repositories. |
+| **TOTAL** | **~$12.83** | **Per Month** |
 
-> **Note:** Actual costs may vary slightly based on data transfer rates and region selection. This estimate does not account for the AWS Free Tier, which may reduce the cost to **<$10/month** for the first 12 months.
+> **Note:** Actual costs may vary slightly based on data transfer rates and region selection. This estimate does not account for the AWS Free Tier, which may reduce the cost to **<$10/month** for the first 12 months. Amplify hosting includes built-in CloudFront CDN distribution at no additional cost.
 
 ---
 
@@ -41,8 +39,8 @@ This is the material cost to build one unit of the **Edge Device Prototype**.
 | **Biometric Sensor** | AS608 Optical | $12.00 | Fingerprint scanning and verification. |
 | **Health Sensor** | MAX30102 | $3.00 | Measures Heart Rate and SpO2. |
 | **Display & UI** | LCD 1602 + Keypad | $2.00 | User interaction interface. |
-| **Power & Misc** | Battery, Wires, Case | $5.00 | Consumables and 3D printed casing. |
-| **TOTAL** | | **~$30.00** | **Per Device** |
+| **Power & Misc** | Battery, Wires, Case | $3.00 | Consumables and 3D printed casing. |
+| **TOTAL** | | **~$25.00** | **Per Device** |
 
 ---
 

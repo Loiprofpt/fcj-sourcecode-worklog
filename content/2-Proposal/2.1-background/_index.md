@@ -11,7 +11,7 @@ pre: " <b> 2.1 </b> "
 ## 1.1 Executive Summary
 
 ### Customer Background
-The customer is **FPT University HCMC (Academic Board)** and potential Traffic Enforcement Agencies. They seek a technological demonstration of how **IoT** and **Cloud Computing** can solve real-world problems in traffic monitoring. The current manual alcohol inspection process suffers from a lack of operator verification, data fragmentation, and low public transparency.
+The customer is **FPT University HCMC (Academic Board)** under the mentorship of **Nguyễn Gia Hưng** and potential Traffic Enforcement Agencies. They seek a technological demonstration of how **IoT** and **Cloud Computing** can solve real-world problems in traffic monitoring. The current manual alcohol inspection process suffers from a lack of operator verification, data fragmentation, and low public transparency.
 
 ### Business & Technical Objectives
 **Team SPICA** proposes a solution named **"IoT-Based Alcohol Violation Detection System"** to modernize this workflow.
@@ -36,7 +36,7 @@ To be considered successful, the system must meet the following quantitative met
 | **Authentication Latency** | **< 2 seconds** | Round-trip time from Fingerprint Scan $\to$ Cloud Auth $\to$ Device Unlock. |
 | **Data Integrity** | **99.9%** | Zero loss of violation records during network stability tests. |
 | **Security Compliance** | **100%** | All Infrastructure-as-Code (Terraform) must pass **tfsec** scans in the CI/CD pipeline. |
-| **Deployment Automation** | **Fully Automated** | Backend deploys via **GitHub Actions**; Frontend deploys via **AWS Amplify**. |
+| **Deployment Automation** | **Fully Automated** | Backend deploys via **Terraform + GitHub Actions**; Frontend deploys via **AWS Amplify**. |
 | **Cost Efficiency** | **<$15 / month** | Operational costs on AWS for the pilot phase. |
 
 ---
@@ -51,7 +51,7 @@ To be considered successful, the system must meet the following quantitative met
 * **Cloud Access:** Team SPICA has Administrator access to a dedicated AWS account for resource provisioning.
 * **Development Stack:**
     * **Firmware:** C++ / PlatformIO.
-    * **Backend:** Node.js (Lambda) & Terraform (IaC).
+    * **Backend:** Python (Lambda) & Terraform (IaC).
     * **Frontend:** React/Vue.js hosted on S3/Amplify.
 
 ### Scope Limitations

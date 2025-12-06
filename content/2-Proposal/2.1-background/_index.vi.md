@@ -11,7 +11,7 @@ pre: " <b> 2.1 </b> "
 ## 1.1 Tóm tắt Điều hành (Executive Summary)
 
 ### Bối cảnh Khách hàng
-Khách hàng là **Đại học FPT TP.HCM (Hội đồng Học thuật)** và tiềm năng cho các Cơ quan Xử lý Vi phạm Giao thông. Họ mong muốn một mô hình minh họa công nghệ về cách **IoT** và **Điện toán Đám mây** có thể giải quyết các vấn đề thực tế trong giám sát giao thông. Quy trình kiểm tra nồng độ cồn thủ công hiện tại gặp nhiều hạn chế: không xác thực được người vận hành, dữ liệu phân tán và thiếu minh bạch đối với người dân.
+Khách hàng là **Đại học FPT TP.HCM (Hội đồng Học thuật)** dưới sự hướng dẫn của **Nguyễn Gia Hưng** và tiềm năng cho các Cơ quan Xử lý Vi phạm Giao thông. Họ mong muốn một mô hình minh họa công nghệ về cách **IoT** và **Điện toán Đám mây** có thể giải quyết các vấn đề thực tế trong giám sát giao thông. Quy trình kiểm tra nồng độ cồn thủ công hiện tại gặp nhiều hạn chế: không xác thực được người vận hành, dữ liệu phân tán và thiếu minh bạch đối với người dân.
 
 ### Mục tiêu Kinh doanh & Kỹ thuật
 **Team SPICA** đề xuất giải pháp **“IoT-Based Alcohol Violation Detection System”** nhằm hiện đại hóa quy trình này.  
@@ -37,7 +37,7 @@ Các mục tiêu chính gồm:
 | **Độ trễ xác thực** | **< 2 giây** | Thời gian từ lúc quét vân tay → xác thực Cloud → mở khóa thiết bị. |
 | **Độ toàn vẹn dữ liệu** | **99.9%** | Không mất dữ liệu vi phạm trong các bài kiểm tra mạng. |
 | **Tuân thủ bảo mật** | **100%** | Mọi Terraform phải vượt qua kiểm tra **tfsec** trong CI/CD. |
-| **Tự động triển khai** | **Hoàn toàn tự động** | Backend deploy qua **GitHub Actions**; Frontend deploy qua **AWS Amplify**. |
+| **Tự động triển khai** | **Hoàn toàn tự động** | Backend deploy qua **Terraform + GitHub Actions**; Frontend deploy qua **AWS Amplify**. |
 | **Chi phí tối ưu** | **< 15 USD/tháng** | Chi phí vận hành AWS cho giai đoạn thử nghiệm. |
 
 ---
@@ -52,10 +52,9 @@ Các mục tiêu chính gồm:
 * **Truy cập Cloud:** Team SPICA có quyền Administrator trên tài khoản AWS dành riêng cho dự án.
 * **Công nghệ phát triển:**
     * **Firmware:** C++ / PlatformIO  
-    * **Backend:** Node.js (Lambda) & Terraform (IaC)  
+    * **Backend:** Python (Lambda) & Terraform (IaC)  
     * **Frontend:** React/Vue.js trên S3/Amplify  
 
 ### Giới hạn Phạm vi
 * **Tính pháp lý:** Đây là dự án Proof of Concept (PoC). Các số đo cảm biến chỉ mang tính minh họa và không có giá trị pháp lý mà không có hiệu chuẩn công nghiệp.
 * **Thiết kế vỏ thiết bị:** Prototype sử dụng vỏ mica hoặc 3D-printed tạm thời, không phải tiêu chuẩn công nghiệp IP67.
-

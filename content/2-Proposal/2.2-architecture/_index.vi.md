@@ -13,14 +13,12 @@ Giải pháp sử dụng **Kiến trúc Cloud-Native Serverless** nhằm đảm 
 
 ![Sơ đồ kiến trúc serverless AWS](/images/2-Proposal/arch.jpg)
 
-[Image of AWS serverless architecture diagram]
-
 **Các lớp kiến trúc chính:**
 1. **Edge Layer:** ESP32 giao tiếp với các cảm biến sinh trắc học và môi trường.
 2. **Ingestion & Compute Layer:** AWS IoT Core dùng cho giao tiếp an toàn và AWS Lambda xử lý logic serverless.
 3. **Storage Layer:** Amazon DynamoDB lưu trữ dữ liệu rápido (NoSQL) như danh sách cảnh sát và các bản ghi vi phạm.
-4. **Security & Delivery Layer:** AWS WAF, API Gateway và CloudFront bảo vệ truy cập công khai.
-5. **DevOps Layer:** Tự động hóa CI/CD bằng **AWS CodePipeline** (Backend) và **AWS Amplify** (Frontend).
+4. **Security & Delivery Layer:** AWS WAF bảo vệ Amplify, và API Gateway cho truy cập backend an toàn.
+5. **DevOps Layer:** Tự động hóa CI/CD bằng **AWS CodePipeline** (Backend) và **AWS Amplify** (Frontend với CloudFront CDN tích hợp sẵn).
 
 ---
 
@@ -31,12 +29,12 @@ Hệ thống sử dụng các dịch vụ AWS và linh kiện phần cứng như
 | Danh mục | Dịch vụ / Thành phần | Mục đích |
 | :--- | :--- | :--- |
 | **IoT & Ingestion** | **AWS IoT Core** | MQTT Broker bảo mật (TLS 1.2) cho giao tiếp thiết bị. |
-| **Compute** | **AWS Lambda** | Các hàm serverless: `Authorize`, `ProcessViolation`, `GetDashboard`, `SearchByCCCD`. |
+| **Compute** | **AWS Lambda (Python)** | Các hàm serverless: `Authorize`, `ProcessViolation`, `GetDashboard`, `SearchByCCCD`. |
 | **Database** | **Amazon DynamoDB** | Lưu bảng `DeviceOfficerMap_Pool` và `ViolationsDB` (có GSI). |
 | **API Layer** | **Amazon API Gateway** | Cung cấp REST API bảo mật cho frontend. |
-| **Security** | **AWS WAF** | Bảo vệ API Gateway và CloudFront khỏi các tấn công web. |
-| **Frontend** | **AWS Amplify** | Hosting, CI/CD cho ứng dụng React/Vue SPA. |
-| **Backend DevOps** | **AWS CodePipeline** | Triển khai Terraform (IaC) qua CodeBuild. |
+| **Security** | **AWS WAF** | Bảo vệ Amplify hosting khỏi các tấn công web. |
+| **Frontend** | **AWS Amplify** | Hosting (với CloudFront CDN tích hợp sẵn), CI/CD cho ứng dụng React/Vue SPA. |
+| **Backend DevOps** | **Terraform + GitHub Actions** | Triển khai Infrastructure as Code và tự động hóa CI/CD. |
 | **Monitoring** | **Amazon CloudWatch** | Log, metric và cảnh báo lỗi hệ thống. |
 
 ### Linh kiện phần cứng tại Edge
@@ -83,4 +81,3 @@ Hệ thống sử dụng các dịch vụ AWS và linh kiện phần cứng như
   * **IAM Roles:** Áp dụng nguyên tắc “Least Privilege”.
   * **Device Identity:** Mỗi ESP32 có chứng chỉ X.509 riêng.
 * **Quyền riêng tư:** Dữ liệu PII (CCCD) được bảo vệ nghiêm ngặt, chỉ cho phép đọc theo policy.
-

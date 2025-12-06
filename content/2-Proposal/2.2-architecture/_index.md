@@ -14,15 +14,12 @@ The solution leverages a **Cloud-Native Serverless Architecture** ensuring high 
 ![AWS serverless architecture diagram](/images/2-Proposal/arch.jpg)
 
 
-[Image of AWS serverless architecture diagram]
-
-
 **Core Architectural Layers:**
 1.  **Edge Layer:** ESP32 microcontrollers interacting with biometric and environmental sensors.
 2.  **Ingestion & Compute Layer:** AWS IoT Core for secure messaging and AWS Lambda for serverless business logic.
 3.  **Storage Layer:** Amazon DynamoDB for fast, NoSQL data storage of officer registries and violation logs.
-4.  **Security & Delivery Layer:** AWS WAF, API Gateway, and CloudFront ensuring secure public access.
-5.  **DevOps Layer:** Automated CI/CD pipelines using **AWS CodePipeline** (Backend) and **AWS Amplify** (Frontend).
+4.  **Security & Delivery Layer:** AWS WAF protecting Amplify, and API Gateway for secure backend access.
+5.  **DevOps Layer:** Automated CI/CD using **Terraform & GitHub Actions** (Backend) and **AWS Amplify** (Frontend with built-in CloudFront CDN).
 
 ---
 
@@ -33,12 +30,12 @@ The system utilizes the following AWS Services and Hardware components:
 | Category | Service / Component | Purpose |
 | :--- | :--- | :--- |
 | **IoT & Ingestion** | **AWS IoT Core** | Secure MQTT Broker (TLS 1.2) for device communication. |
-| **Compute** | **AWS Lambda** | Serverless functions: `Authorize`, `ProcessViolation`, `GetDashboard`, `SearchByCCCD`. |
+| **Compute** | **AWS Lambda (Python)** | Serverless functions: `Authorize`, `ProcessViolation`, `GetDashboard`, `SearchByCCCD`. |
 | **Database** | **Amazon DynamoDB** | Storage for `DeviceOfficerMap_Pool` and `ViolationsDB` (with Global Secondary Indexes). |
 | **API Layer** | **Amazon API Gateway** | Exposes secure REST API endpoints to the frontend. |
-| **Security** | **AWS WAF** | Protects API Gateway and CloudFront distributions from web exploits. |
-| **Frontend** | **AWS Amplify** | Hosting, CI/CD, and integration for the React/Vue SPA. |
-| **Backend DevOps** | **AWS CodePipeline** | Orchestrates Terraform (IaC) deployments via CodeBuild. |
+| **Security** | **AWS WAF** | Protects Amplify hosting from web exploits. |
+| **Frontend** | **AWS Amplify** | Hosting (with built-in CloudFront CDN), CI/CD, and integration for the React/Vue SPA. |
+| **Backend DevOps** | **Terraform + GitHub Actions** | Infrastructure as Code deployment and CI/CD automation. |
 | **Monitoring** | **Amazon CloudWatch** | System logging, metrics, and error alarming. |
 
 ### Edge Hardware Components
